@@ -1,43 +1,31 @@
 ﻿using System;
-public class Exercicio1
+using System.Collections.Generic;
+public class Exerc2B
 {
     public static void Main()
     {
-        int convidadosNoivo = 300;
-        int convidadosNoiva = 600;
-        int convidadosPresentesNoivo = 400;
-        int convidadosPresentesNoiva = 400;
+        int x = 0;
+        Console.WriteLine("Insira o numero de convidados: ");
+        x = Convert.ToInt32(Console.ReadLine());
 
+        string[] convidados = new string[x];
+        int i = 0;
+        int a = 0;
 
-        if (convidadosNoivo > convidadosNoiva)
+        do
         {
-            Console.WriteLine("O numero de convidados da noivo e menor que do noiva");
+            Console.WriteLine("Insira o nome do convidado: ");
+            convidados[i] = Convert.ToString(Console.ReadLine());
+            i++;
+        } while (i < convidados.Length);
 
-        }
-        else if (convidadosNoiva > convidadosNoivo)
+        Console.WriteLine("Lista de convidados: ");
+        do
         {
-            Console.WriteLine("O numero de convidados da noiva e maior que do noivo");
-        }
-        else if (convidadosNoiva == convidadosNoivo)
-        {
-            Console.WriteLine("O numero de convidados da noiva e igual do noivo");
-        }
-        
-        if (convidadosNoiva != convidadosNoivo)
-        {
-            Console.WriteLine("O numero de convidados da noiva é diferente do numero de convidados do noivo");
-        }
+            Console.WriteLine(convidados[a]);
+            a++;
+        } while (a < convidados.Length);
 
-
-        if (convidadosPresentesNoivo > convidadosNoivo)
-        {
-            Console.WriteLine("Existem penetras pois o numero convidados presentes é maior que o numero de convidados do noivo.");
-        }
-        else if (convidadosPresentesNoiva > convidadosNoiva)
-        {
-            Console.WriteLine("Existem penetras pois o numero convidados presentes é maior que o numero de convidados do noiva.");
-        }
 
     }
-
-};
+}
